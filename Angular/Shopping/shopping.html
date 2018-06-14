@@ -1,0 +1,19 @@
+<DOCTYPE! html>
+<html>
+    <title>
+        Shopping List
+    </title>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div data-ng-app="myShoppingList" data-ng-controller="myCtrl">
+            <ul>
+                <li data-ng-repeat="product in products">{{ product }} <span data-ng-click="removeItem($index)">x</span></li>
+            </ul>
+            <input type="text" data-ng-model="item">
+            <button data-ng-click="addItem()">Add</button>
+        </div>
+    </body>
+</html>
